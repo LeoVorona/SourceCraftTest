@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Внедрение ИИ на промышленном предприятии — тут могла бы быть ваша реклама</title>
+  <meta name="description" content="Предиктивная диагностика, компьютерное зрение и цифровые двойники для действующего производства. Пилот на одном участке, масштабирование на весь контур, передача модели вашей команде.">
+  <meta name="theme-color" content="#f5f8fc">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="ИИ, который окупается на вашем производстве">
+  <meta property="og:description" content="Внедрение промышленного ИИ: предиктивная диагностика, компьютерное зрение, оптимизация энергопотребления, цифровой двойник, ИИ-ассистент оператора.">
+  <meta property="og:image" content="img/og-cover.svg">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('swp-theme');
+        var theme = saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+      } catch (e) { /* localStorage недоступен — остаётся светлая тема */ }
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+
+  <div class="scroll-progress" aria-hidden="true"><span id="scrollProgress"></span></div>
+
+  <header class="site-header" id="siteHeader">
+    <div class="container header__inner">
+      <a class="logo" href="#top" aria-label="Тут могла бы быть ваша реклама — на главную">
+        <img class="logo__mark" src="img/logo.svg" alt="" width="44" height="44" decoding="async">
+        <span class="logo__text">
+          <strong>ВАША РЕКЛАМА</strong>
+          <small>Industrial&nbsp;AI</small>
+        </span>
+      </a>
+
+      <nav class="nav" id="primaryNav" aria-label="Основная навигация">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="#solutions">Решения</a></li>
+          <li><a class="nav__link" href="#effect">Эффект</a></li>
+          <li><a class="nav__link" href="#process">Внедрение</a></li>
+          <li><a class="nav__link" href="#cases">Кейсы</a></li>
+          <li><a class="nav__link" href="#faq">FAQ</a></li>
+        </ul>
+        <a class="btn btn--primary nav__cta" href="#contact">Обсудить пилот</a>
+      </nav>
+
+      <div class="header__tools">
+        <button class="icon-btn" id="themeToggle" type="button" aria-label="Переключить цветовую тему" aria-pressed="false">
+          <svg class="icon icon--sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M19.1 4.9l-1.8 1.8M6.7 17.3l-1.8 1.8"/></svg>
+          <svg class="icon icon--moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A8.5 8.5 0 1 1 11.2 3a6.6 6.6 0 0 0 9.8 9.8Z"/></svg>
+        </button>
+        <button class="burger" id="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="primaryNav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <canvas class="hero__canvas" id="neuralCanvas" aria-hidden="true"></canvas>
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <p class="badge">
+            <span class="badge__dot" aria-hidden="true"></span>
+            Промышленный ИИ · пилот без остановки производства
+          </p>
+          <h1 class="hero__title">ИИ, который <span class="grad-text">окупается</span> на вашем производстве</h1>
+          <p class="hero__lead">
+            Предиктивная диагностика, компьютерное зрение и цифровые двойники для действующих цехов.
+            Начинаем с одного участка, показываем эффект в деньгах и масштабируем на весь контур.
+          </p>
+          <div class="hero__actions">
+            <a class="btn btn--primary btn--lg" href="#calculator">
+              Рассчитать эффект
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a class="btn btn--ghost btn--lg" href="#solutions">Смотреть решения</a>
+          </div>
+          <ul class="hero__points">
+            <li>
+              <svg class="icon icon--check" viewBox="0 0 24 24" aria-hidden="true"><path d="m4 12.5 5 5L20 6.5"/></svg>
+              Работаем с данными вашей АСУ&nbsp;ТП, MES и журналов ТОиР
+            </li>
+            <li>
+              <svg class="icon icon--check" viewBox="0 0 24 24" aria-hidden="true"><path d="m4 12.5 5 5L20 6.5"/></svg>
+              Модели разворачиваются в изолированном контуре
+            </li>
+            <li>
+              <svg class="icon icon--check" viewBox="0 0 24 24" aria-hidden="true"><path d="m4 12.5 5 5L20 6.5"/></svg>
+              Передаём код, документацию и обучаем вашу команду
+            </li>
+          </ul>
+        </div>
+
+        <div class="hero__visual">
+          <img class="hero__image" src="img/hero-illustration.svg" alt="Схема промышленного предприятия с нейросетевым контуром аналитики, панелью метрик и прогнозом отказа оборудования" width="900" height="640" fetchpriority="high" decoding="async">
+        </div>
+      </div>
+    </section>
+
+    <!-- CHALLENGE -->
+    <section class="section" id="challenge">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">Проблема → решение</p>
+          <h2 class="section__title">Где производство теряет деньги каждый день</h2>
+          <p class="section__lead">
+            Большинство потерь уже заложено в текущих процессах — их не видно в отчётах, пока не начнёшь
+            смотреть на данные оборудования в реальном времени.
+          </p>
+        </header>
+
+        <div class="split-grid">
+          <article class="split-card reveal">
+            <p class="split-card__problem">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m9 9 6 6M15 9l-6 6"/></svg>
+              Внеплановые остановки
+            </p>
+            <p class="split-card__text">Оборудование выходит из строя между регламентными ТО. Каждый час простоя — прямые потери выпуска и срыв сроков.</p>
+            <p class="split-card__solution">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              Предиктивная диагностика по вибрации, току и температуре предупреждает за 3–14 дней до отказа.
+            </p>
+          </article>
+
+          <article class="split-card reveal">
+            <p class="split-card__problem">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m9 9 6 6M15 9l-6 6"/></svg>
+              Брак на поздних переделах
+            </p>
+            <p class="split-card__text">Дефект обнаруживается на финальном контроле, когда в деталь уже вложены материалы, энергия и время линии.</p>
+            <p class="split-card__solution">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              Компьютерное зрение находит отклонение в потоке и останавливает обработку сразу.
+            </p>
+          </article>
+
+          <article class="split-card reveal">
+            <p class="split-card__problem">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m9 9 6 6M15 9l-6 6"/></svg>
+              Перерасход энергоресурсов
+            </p>
+            <p class="split-card__text">Режимы работы подбираются по опыту смены, а не по фактическому оптимуму при текущей нагрузке и тарифе.</p>
+            <p class="split-card__solution">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              Модель оптимизации подбирает уставки под нагрузку и цену энергии в реальном времени.
+            </p>
+          </article>
+
+          <article class="split-card reveal">
+            <p class="split-card__problem">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m9 9 6 6M15 9l-6 6"/></svg>
+              Знания уходят с людьми
+            </p>
+            <p class="split-card__text">Опыт операторов и наладчиков не формализован: при смене персонала предприятие теряет накопленные решения.</p>
+            <p class="split-card__solution">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              ИИ-ассистент отвечает по регламентам и истории аварий, сохраняя опыт в системе.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOLUTIONS -->
+    <section class="section section--tinted" id="solutions">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">Направления внедрения</p>
+          <h2 class="section__title">Пять решений, которые дают эффект первыми</h2>
+          <p class="section__lead">
+            Не нужно внедрять всё сразу. Мы выбираем направление по цене потерь и зрелости данных,
+            а остальные подключаем по мере масштабирования.
+          </p>
+        </header>
+
+        <div class="solutions-grid">
+          <article class="sol-card reveal">
+            <span class="sol-card__icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h3.5l2.5 7 4-14 2.5 7H21"/></svg>
+            </span>
+            <h3 class="sol-card__title">Предиктивная диагностика</h3>
+            <p class="sol-card__text">Прогноз отказов насосов, компрессоров, приводов и подшипниковых узлов по телеметрии — без дополнительных датчиков там, где их можно избежать.</p>
+            <p class="sol-card__meta">Эффект: меньше внеплановых остановок</p>
+          </article>
+
+          <article class="sol-card reveal">
+            <span class="sol-card__icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.5-6.5 10-6.5S22 12 22 12s-3.5 6.5-10 6.5S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></svg>
+            </span>
+            <h3 class="sol-card__title">Компьютерное зрение</h3>
+            <p class="sol-card__text">Контроль геометрии, поверхности и полноты сборки в потоке: 100% деталей вместо выборочного контроля контролёром.</p>
+            <p class="sol-card__meta">Эффект: брак не уходит заказчику</p>
+          </article>
+
+          <article class="sol-card reveal">
+            <span class="sol-card__icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z"/></svg>
+            </span>
+            <h3 class="sol-card__title">Оптимизация энергопотребления</h3>
+            <p class="sol-card__text">Снижение расхода электроэнергии, пара и сжатого воздуха за счёт управления уставками и расписанием нагрузки.</p>
+            <p class="sol-card__meta">Эффект: прямая экономия в счёте</p>
+          </article>
+
+          <article class="sol-card reveal">
+            <span class="sol-card__icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5 21 7v10l-9 4.5L3 17V7l9-4.5Z"/><path d="M12 12l9-5M12 12v9.5M12 12 3 7"/></svg>
+            </span>
+            <h3 class="sol-card__title">Цифровой двойник линии</h3>
+            <p class="sol-card__text">Виртуальная модель участка для проверки режимов, такта и переналадок — без риска для реального производства.</p>
+            <p class="sol-card__meta">Эффект: решения проверяются до запуска</p>
+          </article>
+
+          <article class="sol-card reveal">
+            <span class="sol-card__icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H8l-4 4V5Z"/><path d="M8.5 10.5h.01M12 10.5h.01M15.5 10.5h.01"/></svg>
+            </span>
+            <h3 class="sol-card__title">ИИ-ассистент оператора</h3>
+            <p class="sol-card__text">Поиск по регламентам, журналам и истории ремонтов в одном окне. Ответ на вопрос смены — за секунды вместо часов.</p>
+            <p class="sol-card__meta">Эффект: опыт остаётся на предприятии</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- EFFECT -->
+    <section class="section" id="effect">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">Эффект в цифрах</p>
+          <h2 class="section__title">Что меняется на пилотном участке</h2>
+          <p class="section__lead">
+            Средние показатели по проектам на дискретном и непрерывном производстве.
+            Итоговый диапазон зависит от зрелости данных и состояния оборудования.
+          </p>
+        </header>
+
+        <div class="metrics">
+          <article class="metric reveal">
+            <p class="metric__value"><span class="metric__sign">−</span><span data-count="37">0</span><span class="metric__unit">%</span></p>
+            <h3 class="metric__title">Внеплановые простои</h3>
+            <p class="metric__note">Переход от ремонта по факту отказа к плановому вмешательству.</p>
+            <div class="metric__bar" style="--value: 74%"><span></span></div>
+          </article>
+
+          <article class="metric reveal">
+            <p class="metric__value"><span class="metric__sign">−</span><span data-count="28">0</span><span class="metric__unit">%</span></p>
+            <h3 class="metric__title">Брак на выходе</h3>
+            <p class="metric__note">Дефект фиксируется на раннем переделе, а не у заказчика.</p>
+            <div class="metric__bar" style="--value: 56%"><span></span></div>
+          </article>
+
+          <article class="metric reveal">
+            <p class="metric__value"><span class="metric__sign">−</span><span data-count="15">0</span><span class="metric__unit">%</span></p>
+            <h3 class="metric__title">Энергозатраты</h3>
+            <p class="metric__note">Уставки подстраиваются под фактическую нагрузку и тариф.</p>
+            <div class="metric__bar" style="--value: 30%"><span></span></div>
+          </article>
+
+          <article class="metric reveal">
+            <p class="metric__value"><span class="metric__sign">+</span><span data-count="12">0</span><span class="metric__unit">%</span></p>
+            <h3 class="metric__title">Показатель OEE</h3>
+            <p class="metric__note">Рост доступности и производительности без покупки станков.</p>
+            <div class="metric__bar" style="--value: 24%"><span></span></div>
+          </article>
+        </div>
+
+        <p class="metrics__note reveal">
+          Цифры приведены как ориентир для демонстрационного лендинга и не являются публичной офертой.
+        </p>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="section section--tinted" id="process">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">Как проходит внедрение</p>
+          <h2 class="section__title">Пять этапов от аудита до поддержки</h2>
+          <p class="section__lead">
+            Каждый этап заканчивается измеримым результатом и решением: продолжаем, корректируем или останавливаемся.
+          </p>
+        </header>
+
+        <ol class="timeline">
+          <li class="step reveal">
+            <span class="step__marker" aria-hidden="true">01</span>
+            <div class="step__body">
+              <div class="step__head">
+                <h3 class="step__title">Аудит данных и процессов</h3>
+                <span class="step__tag">1–2 недели</span>
+              </div>
+              <p class="step__text">Смотрим, какие сигналы уже есть в АСУ&nbsp;ТП, MES и ТОиР. Выбираем участок с максимальной ценой потерь и проверяем качество истории.</p>
+              <p class="step__result">Результат: карта данных и расчёт потенциала участка.</p>
+            </div>
+          </li>
+
+          <li class="step reveal">
+            <span class="step__marker" aria-hidden="true">02</span>
+            <div class="step__body">
+              <div class="step__head">
+                <h3 class="step__title">Пилот на одном участке</h3>
+                <span class="step__tag">3–6 недель</span>
+              </div>
+              <p class="step__text">Собираем историю, обучаем первую модель и сверяем прогноз с фактическими событиями. Ничего не меняем в контуре управления.</p>
+              <p class="step__result">Результат: работающая модель и замеренная точность прогноза.</p>
+            </div>
+          </li>
+
+          <li class="step reveal">
+            <span class="step__marker" aria-hidden="true">03</span>
+            <div class="step__body">
+              <div class="step__head">
+                <h3 class="step__title">MVP в контуре управления</h3>
+                <span class="step__tag">4–8 недель</span>
+              </div>
+              <p class="step__text">Выводим рекомендации оператору, настраиваем пороги и алерты в существующей диспетчерской, обучаем смену работе с подсказками.</p>
+              <p class="step__result">Результат: решения принимаются по данным, а не по ощущениям.</p>
+            </div>
+          </li>
+
+          <li class="step reveal">
+            <span class="step__marker" aria-hidden="true">04</span>
+            <div class="step__body">
+              <div class="step__head">
+                <h3 class="step__title">Масштабирование</h3>
+                <span class="step__tag">по этапам</span>
+              </div>
+              <p class="step__text">Тиражируем модель на однотипное оборудование и подключаем новые направления: зрение, энергию, цифровой двойник.</p>
+              <p class="step__result">Результат: эффект на всём контуре, а не на одном стенде.</p>
+            </div>
+          </li>
+
+          <li class="step reveal">
+            <span class="step__marker" aria-hidden="true">05</span>
+            <div class="step__body">
+              <div class="step__head">
+                <h3 class="step__title">Передача и поддержка</h3>
+                <span class="step__tag">постоянно</span>
+              </div>
+              <p class="step__text">Передаём код, документацию и мониторинг модели вашей команде, сопровождаем дообучение на новых данных.</p>
+              <p class="step__result">Результат: система живёт внутри предприятия.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- CALCULATOR -->
+    <section class="section" id="calculator">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">Калькулятор</p>
+          <h2 class="section__title">Посчитайте эффект для своего парка</h2>
+          <p class="section__lead">
+            Оценка строится на снижении внеплановых простоев на 37% — среднем результате пилотных проектов.
+            Двигайте ползунки, расчёт обновляется сразу.
+          </p>
+        </header>
+
+        <div class="calc reveal">
+          <div class="calc__controls">
+            <div class="calc__control">
+              <div class="calc__label">
+                <label for="calcUnits">Единиц оборудования в контуре</label>
+                <output id="calcUnitsOut" for="calcUnits">120</output>
+              </div>
+              <input class="range" id="calcUnits" type="range" min="10" max="600" step="10" value="120">
+              <p class="calc__hint">Насосы, компрессоры, приводы, узлы линий</p>
+            </div>
+
+            <div class="calc__control">
+              <div class="calc__label">
+                <label for="calcHours">Часов простоя в месяц на единицу</label>
+                <output id="calcHoursOut" for="calcHours">6 ч</output>
+              </div>
+              <input class="range" id="calcHours" type="range" min="2" max="40" step="1" value="6">
+              <p class="calc__hint">Внеплановые остановки, включая переналадку после отказа</p>
+            </div>
+
+            <div class="calc__control">
+              <div class="calc__label">
+                <label for="calcCost">Стоимость часа простоя, ₽</label>
+                <output id="calcCostOut" for="calcCost">30 000 ₽</output>
+              </div>
+              <input class="range" id="calcCost" type="range" min="5000" max="300000" step="5000" value="30000">
+              <p class="calc__hint">Упущенная выручка и затраты на восстановление</p>
+            </div>
+          </div>
+
+          <div class="calc__result" aria-live="polite">
+            <p class="calc__result-label">Экономия в год</p>
+            <p class="calc__result-value" id="calcAnnual">—</p>
+            <ul class="calc__list">
+              <li><span>Потери от простоев сейчас</span><strong id="calcMonthly">—</strong></li>
+              <li><span>Экономия в месяц</span><strong id="calcSaved">—</strong></li>
+              <li class="calc__highlight"><span>Ориентировочная окупаемость</span><strong id="calcPayback">—</strong></li>
+            </ul>
+            <p class="calc__disclaimer">
+              Расчёт демонстрационный: учитывает только эффект от снижения простоев и не включает
+              экономию на браке и энергоресурсах.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CASES -->
+    <section class="section section--tinted" id="cases">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">Кейсы</p>
+          <h2 class="section__title">Как это выглядело на практике</h2>
+          <p class="section__lead">Три типовых сценария внедрения — с фокусом на измеримый результат, а не на технологии.</p>
+        </header>
+
+        <div class="cases reveal">
+          <div class="cases__viewport" id="casesViewport" tabindex="0" role="region" aria-roledescription="карусель" aria-label="Кейсы внедрения">
+            <div class="cases__track" id="casesTrack">
+              <article class="case" role="group" aria-roledescription="слайд" aria-label="Слайд 1 из 3">
+                <p class="case__industry">Металлургия · прокатный стан</p>
+                <blockquote class="case__quote">
+                  «Прогноз по подшипниковым узлам начал появляться за неделю до отказа. Мы успели
+                  спланировать ремонт в технологическое окно и не потеряли ни одной плавки».
+                </blockquote>
+                <p class="case__author">Главный механик, металлургический комбинат</p>
+                <p class="case__metric"><span>−42%</span> внеплановых остановок</p>
+              </article>
+
+              <article class="case" role="group" aria-roledescription="слайд" aria-label="Слайд 2 из 3">
+                <p class="case__industry">Автокомпоненты · линия ОТК</p>
+                <blockquote class="case__quote">
+                  «Камера находит задиры и пропуски сборки, которые глаз контролёра ловил через раз.
+                  Брак перестал уходить заказчику, а споры по рекламациям прекратились».
+                </blockquote>
+                <p class="case__author">Начальник отдела технического контроля</p>
+                <p class="case__metric"><span>−31%</span> брака на выходе</p>
+              </article>
+
+              <article class="case" role="group" aria-roledescription="слайд" aria-label="Слайд 3 из 3">
+                <p class="case__industry">ЦБК · энергохозяйство</p>
+                <blockquote class="case__quote">
+                  «Модель предложила режим, который мы сами не пробовали: расход пара упал без потери
+                  качества продукции. Теперь рекомендации проверяем каждую смену».
+                </blockquote>
+                <p class="case__author">Главный энергетик, целлюлозно-бумажный комбинат</p>
+                <p class="case__metric"><span>−14%</span> энергозатрат</p>
+              </article>
+            </div>
+          </div>
+
+          <div class="cases__controls">
+            <button class="round-btn" id="casesPrev" type="button" aria-label="Предыдущий кейс">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m15 6-6 6 6 6"/></svg>
+            </button>
+            <div class="cases__dots" id="casesDots" role="tablist" aria-label="Выбор кейса"></div>
+            <button class="round-btn" id="casesNext" type="button" aria-label="Следующий кейс">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+      <div class="container faq__layout">
+        <header class="section__head section__head--left reveal">
+          <p class="eyebrow">Вопросы и ответы</p>
+          <h2 class="section__title">Что обычно спрашивают перед пилотом</h2>
+          <p class="section__lead">Если вашего вопроса нет в списке — задайте его в форме ниже.</p>
+        </header>
+
+        <div class="faq reveal">
+          <div class="faq__item">
+            <h3 class="faq__heading">
+              <button class="faq__q" type="button" aria-expanded="false" aria-controls="faqA1" id="faqQ1">
+                Нужно ли менять оборудование или останавливать производство?
+                <span class="faq__icon" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div class="faq__a" id="faqA1" role="region" aria-labelledby="faqQ1">
+              <div class="faq__a-inner">
+                <p>Нет. Мы используем сигналы, которые уже есть в АСУ&nbsp;ТП, MES и системах ТОиР. Дополнительные датчики ставим только там, где без них модель не набирает точность, — и согласуем это отдельно. Пилот идёт на действующем оборудовании.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq__item">
+            <h3 class="faq__heading">
+              <button class="faq__q" type="button" aria-expanded="false" aria-controls="faqA2" id="faqQ2">
+                Что с безопасностью данных и изоляцией контура?
+                <span class="faq__icon" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div class="faq__a" id="faqA2" role="region" aria-labelledby="faqQ2">
+              <div class="faq__a-inner">
+                <p>Модели можно развернуть полностью внутри периметра предприятия — без выхода в интернет. Передача данных настраивается по вашим правилам: от полной изоляции до агрегированной телеметрии. Доступы выдаются по ролям и журналируются.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq__item">
+            <h3 class="faq__heading">
+              <button class="faq__q" type="button" aria-expanded="false" aria-controls="faqA3" id="faqQ3">
+                Сколько данных нужно для старта?
+                <span class="faq__icon" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div class="faq__a" id="faqA3" role="region" aria-labelledby="faqQ3">
+              <div class="faq__a-inner">
+                <p>Для предиктивной диагностики обычно достаточно 6–12 месяцев истории по ключевым параметрам и журнала отказов. Если истории мало, начинаем с аномалий: модель учится на нормальном режиме и сигнализирует об отклонениях.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq__item">
+            <h3 class="faq__heading">
+              <button class="faq__q" type="button" aria-expanded="false" aria-controls="faqA4" id="faqQ4">
+                Кто будет обслуживать модель после внедрения?
+                <span class="faq__icon" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div class="faq__a" id="faqA4" role="region" aria-labelledby="faqQ4">
+              <div class="faq__a-inner">
+                <p>Ваша команда. Мы передаём код, документацию, инструкции по мониторингу и дообучению, проводим обучение специалистов. Дальше возможны два режима: самостоятельная эксплуатация или сопровождение с нашей стороны.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq__item">
+            <h3 class="faq__heading">
+              <button class="faq__q" type="button" aria-expanded="false" aria-controls="faqA5" id="faqQ5">
+                Как считается экономический эффект?
+                <span class="faq__icon" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div class="faq__a" id="faqA5" role="region" aria-labelledby="faqQ5">
+              <div class="faq__a-inner">
+                <p>До старта фиксируем базовую линию: часы простоев, долю брака, расход энергии и стоимость часа остановки. После пилота сравниваем факт с базовой линией на сопоставимом периоде. Формулу расчёта согласуем с вашей экономической службой.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section section--tinted" id="contact">
+      <div class="container contact">
+        <div class="contact__intro reveal">
+          <p class="eyebrow">Заявка</p>
+          <h2 class="section__title">Обсудим пилот на вашем участке</h2>
+          <p class="section__lead">
+            Начнём с разговора о потерях, а не о технологиях. По итогам предложим участок,
+            формат пилота и способ замера эффекта.
+          </p>
+
+          <ul class="contact__steps">
+            <li><span aria-hidden="true">1</span> Созвон на 30 минут: процессы, оборудование, цели</li>
+            <li><span aria-hidden="true">2</span> Экспресс-аудит доступных данных</li>
+            <li><span aria-hidden="true">3</span> План пилота с расчётом потенциала эффекта</li>
+          </ul>
+
+          <ul class="contact__links">
+            <li>
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="3"/><path d="m3 7 9 6 9-6"/></svg>
+              <a href="mailto:demo@vasha-reklama.example">demo@vasha-reklama.example</a>
+            </li>
+            <li>
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 3h3l1.5 4-2 1.5a12 12 0 0 0 6.4 6.4l1.5-2 4 1.5v3a2 2 0 0 1-2.2 2A17 17 0 0 1 4.6 5.2 2 2 0 0 1 6.6 3Z"/></svg>
+              <a href="tel:+70000000000">+7 (000) 000-00-00</a>
+            </li>
+            <li>
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+              Москва, промзона «Демо», корпус 4
+            </li>
+          </ul>
+        </div>
+
+        <div class="contact__form-wrap reveal">
+          <form class="form" id="leadForm" novalidate>
+            <div class="field">
+              <label for="fName">Имя <span class="req" aria-hidden="true">*</span></label>
+              <input id="fName" name="name" type="text" autocomplete="name" placeholder="Как к вам обращаться" aria-describedby="errName">
+              <p class="field__error" id="errName"></p>
+            </div>
+
+            <div class="field">
+              <label for="fCompany">Компания</label>
+              <input id="fCompany" name="company" type="text" autocomplete="organization" placeholder="Название предприятия">
+              <p class="field__error" id="errCompany"></p>
+            </div>
+
+            <div class="field">
+              <label for="fEmail">E-mail <span class="req" aria-hidden="true">*</span></label>
+              <input id="fEmail" name="email" type="email" autocomplete="email" placeholder="name@company.ru" aria-describedby="errEmail">
+              <p class="field__error" id="errEmail"></p>
+            </div>
+
+            <div class="field">
+              <label for="fPhone">Телефон</label>
+              <input id="fPhone" name="phone" type="tel" autocomplete="tel" placeholder="+7 (___) ___-__-__" aria-describedby="errPhone">
+              <p class="field__error" id="errPhone"></p>
+            </div>
+
+            <div class="field field--full">
+              <label for="fIndustry">Отрасль</label>
+              <select id="fIndustry" name="industry">
+                <option value="">Выберите отрасль</option>
+                <option>Металлургия</option>
+                <option>Машиностроение</option>
+                <option>Химия и нефтехимия</option>
+                <option>Целлюлозно-бумажная</option>
+                <option>Пищевое производство</option>
+                <option>Энергетика</option>
+                <option>Другое</option>
+              </select>
+              <p class="field__error" id="errIndustry"></p>
+            </div>
+
+            <div class="field field--full">
+              <label for="fMessage">Задача или узкое место</label>
+              <textarea id="fMessage" name="message" rows="4" placeholder="Например: частые остановки компрессоров, брак на линии сборки, перерасход пара"></textarea>
+              <p class="field__error" id="errMessage"></p>
+            </div>
+
+            <div class="field field--full">
+              <label class="checkbox">
+                <input id="fConsent" name="consent" type="checkbox" aria-describedby="errConsent">
+                <span>Согласен на обработку персональных данных <span class="req" aria-hidden="true">*</span></span>
+              </label>
+              <p class="field__error" id="errConsent"></p>
+            </div>
+
+            <div class="field field--full form__actions">
+              <button class="btn btn--primary btn--lg" type="submit">Отправить заявку</button>
+              <p class="form__note">Демонстрационная форма: данные не отправляются на сервер.</p>
+            </div>
+
+            <div class="form__success" id="formSuccess" role="status" hidden>
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12.5 2.5 2.5L16 9.5"/></svg>
+              <p><strong>Заявка отправлена.</strong> Это демонстрация — в рабочем проекте здесь была бы интеграция с CRM.</p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a class="logo logo--footer" href="#top">
+          <img class="logo__mark" src="img/logo.svg" alt="" width="40" height="40" loading="lazy" decoding="async">
+          <span class="logo__text">
+            <strong>ВАША РЕКЛАМА</strong>
+            <small>Industrial&nbsp;AI</small>
+          </span>
+        </a>
+        <p class="footer__about">
+          Внедрение ИИ на промышленном предприятии: от аудита данных до работающей модели
+          в контуре управления.
+        </p>
+      </div>
+
+      <nav class="footer__nav" aria-label="Навигация в подвале">
+        <div>
+          <p class="footer__title">Решения</p>
+          <ul>
+            <li><a href="#solutions">Предиктивная диагностика</a></li>
+            <li><a href="#solutions">Компьютерное зрение</a></li>
+            <li><a href="#solutions">Цифровой двойник</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__title">Компания</p>
+          <ul>
+            <li><a href="#process">Как мы работаем</a></li>
+            <li><a href="#cases">Кейсы</a></li>
+            <li><a href="#faq">Вопросы</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__title">Контакты</p>
+          <ul>
+            <li><a href="mailto:demo@vasha-reklama.example">demo@vasha-reklama.example</a></li>
+            <li><a href="tel:+70000000000">+7 (000) 000-00-00</a></li>
+            <li><a href="#contact">Оставить заявку</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div class="container footer__bottom">
+      <p>© <span id="currentYear">2026</span> «Тут могла бы быть ваша реклама». Демонстрационный лендинг.</p>
+      <p>Контент, метрики и кейсы вымышлены и приведены для примера.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
