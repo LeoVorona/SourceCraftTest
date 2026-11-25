@@ -29,6 +29,7 @@ SimpleWebPage/
 ├── script.js           # интерактив (ES5-совместимый, без библиотек)
 ├── README.md
 ├── .nojekyll           # отключает обработку Jekyll на GitHub Pages
+├── DEPLOY-YANDEX.md    # публикация в Яндекс Облаке (доступно в РФ без VPN)
 ├── img/
 │   ├── logo.svg
 │   ├── favicon.svg
@@ -57,6 +58,9 @@ npx serve .
 ```
 
 ## Публикация на GitHub Pages
+
+> **Если `github.io` недоступен без VPN** — используйте Яндекс Облако (Object Storage).
+> Пошаговая инструкция: [`DEPLOY-YANDEX.md`](DEPLOY-YANDEX.md), готовый архив — `site.zip`.
 
 Проект уже загружен в репозиторий
 `https://github.com/LeoVorona/SourceCraftTest` (ветка `main`).

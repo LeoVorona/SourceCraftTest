@@ -1,0 +1,7 @@
+# Локальные артефакты сборки
+site.zip
+
+# Служебные файлы ОС
+Thumbs.db
+.DS_Store
+desktop.ini
