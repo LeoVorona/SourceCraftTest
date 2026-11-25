@@ -35,9 +35,6 @@ SimpleWebPage/
 │   ├── hero-illustration.svg
 │   ├── pattern-circuit.svg
 │   └── og-cover.svg
-└── .github/
-    └── workflows/
-        └── pages.yml   # опциональный автодеплой на GitHub Pages
 ```
 
 ## Локальный просмотр
@@ -61,32 +58,23 @@ npx serve .
 
 ## Публикация на GitHub Pages
 
-### Способ 1 — из ветки (самый простой)
+Проект уже загружен в репозиторий
+`https://github.com/LeoVorona/SourceCraftTest` (ветка `main`).
 
-1. Создайте репозиторий на GitHub, например `simple-web-page`.
-2. Загрузите содержимое папки `SimpleWebPage` в корень репозитория (файлы `index.html`, `style.css`, `script.js`, `img/`).
-3. Откройте **Settings → Pages**.
-4. В блоке **Build and deployment** выберите **Source: Deploy from a branch**.
-5. Укажите **Branch: `main`**, папку **`/ (root)`** и нажмите **Save**.
-6. Через 1–2 минуты сайт будет доступен по адресу
-   `https://<ваш-логин>.github.io/simple-web-page/`.
+1. Откройте **Settings → Pages**.
+2. В блоке **Build and deployment** выберите **Source: Deploy from a branch**.
+3. Укажите **Branch: `main`**, папку **`/ (root)`** и нажмите **Save**.
+4. Через 1–2 минуты сайт будет доступен по адресу
+   `https://leovorona.github.io/SourceCraftTest/`.
 
-### Способ 2 — через GitHub Actions (файл уже в проекте)
+Дальше сайт обновляется обычным `git push` в `main` — Pages пересобирает страницу автоматически.
 
-В репозитории лежит `.github/workflows/pages.yml`. Достаточно:
+### Если нужен деплой через GitHub Actions
 
-1. Открыть **Settings → Pages → Source** и выбрать **GitHub Actions**.
-2. Сделать push в ветку `main`.
-3. Прогресс смотреть во вкладке **Actions**, адрес — в разделе **Pages**.
-
-### Способ 3 — из терминала через `gh-pages`
-
-```bash
-npm install --save-dev gh-pages
-npx gh-pages -d . -b gh-pages
-```
-
-После этого в **Settings → Pages** выберите ветку `gh-pages`.
+Создайте `.github/workflows/pages.yml` (workflow на `actions/configure-pages`,
+`actions/upload-pages-artifact` с `path: .` и `actions/deploy-pages`) и в
+**Settings → Pages → Source** выберите **GitHub Actions**. Для статического
+сайта это не обязательно — ветка `main` справляется без CI.
 
 ## Что стоит заменить перед реальной публикацией
 
